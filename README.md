@@ -1,9 +1,8 @@
 # Artist Statement Feedback
 
-A small Flask backend for a CMU Effective Coding with AI assignment. It sends one
-artist statement to OpenAI and returns three suggestions: **clarity, specificity,
-and structure**. Greetings or unrelated text receive an insufficient-input message.
-No accounts, database, uploads, conversation history, or statement storage.
+A small Flask backend that sends one artist statement to OpenAI and returns three 
+suggestions: **clarity, specificity, and structure**. 
+
 
 ## Frontend → backend → OpenAI
 
@@ -129,7 +128,7 @@ credits. Later real tests succeeded. Repetitive/fabricated feedback prompted
 stronger grounding instructions and an insufficient-input response path. These
 checks do not guarantee every future model judgment.
 
-## Publication and hosting (not performed)
+## Publication and hosting (deployed)
 
 Keep this backend in its own **public GitHub repository**, separate from
 `fatimajshah/113-Portfolio-`. Publish only these ten files:
