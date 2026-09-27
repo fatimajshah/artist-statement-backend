@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+# Local scratch files and editor backups
+work/
+tmp/
+.pytest_cache/
+*.log
+*.tmp
+*.bak
+*.swp
+*~
