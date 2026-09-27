@@ -17,6 +17,13 @@ instructions. A single structured response assesses whether it describes artwork
 and supplies feedback only when appropriate. There is no minimum word count;
 short meaningful statements work. Model judgments still need human review.
 
+## Project links
+
+- Frontend: https://fatimajshah.github.io/113-Portfolio-/statement-feedback/
+- Backend: https://artist-statement-backend.onrender.com/
+- Frontend repository: https://github.com/fatimajshah/113-Portfolio-
+- Backend repository: https://github.com/fatimajshah/artist-statement-backend
+
 ## API
 
 **GET `/`** — HTTP 200 liveness check (does not verify credentials):
@@ -155,15 +162,16 @@ Connect the new repository to a Render **Web Service**:
 `https://fatimajshah.github.io,http://localhost:8000,http://127.0.0.1:8000`.
 Do not upload `.env`.
 
-Later, set the portfolio's `config.js` to the actual Render HTTPS base URL without
-`/feedback`. Publish through the portfolio's existing GitHub Pages setup. CORS
-uses the origin only (no repository path or trailing slash); add any custom-domain
-origin if applicable. Restore the localhost URL for local development. Verify
-live POST requests as well as the health check before submitting.
+The frontend is deployed through the portfolio's GitHub Pages setup.
+Its statement-feedback/config.js sets window.FEEDBACK_API_URL to
+"https://artist-statement-backend.onrender.com". The frontend appends
+/feedback when making requests.
 
-See [prompt_log.md](prompt_log.md) for the actual development history and
-[SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md) for required URLs, public
-repositories, video/view permissions, and the assignment form.
+The backend runs on Render, with its API key stored in Render's environment
+settings. CORS allows https://fatimajshah.github.io.
+
+For local development, temporarily change the frontend's backend URL to
+http://127.0.0.1:5001. Restore the Render URL before publishing.
 
 References: [OpenAI structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs),
 [Render Flask](https://render.com/docs/deploy-flask),
